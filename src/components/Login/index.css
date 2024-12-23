@@ -1,0 +1,367 @@
+.login-page-logo{
+    width:25%;
+    height:auto;
+    margin:30px;
+}
+
+.Login-page-header-main{
+    overflow:hidden;
+    margin: 0 auto;
+    animation-delay: 10s;
+    animation-duration: 10s;
+    animation:element 5s steps(45,end) infinite;
+    white-space:nowrap;
+    background-image: -webkit-linear-gradient(116deg, #ffffff 40%, #328bbc 94%);
+    -webkit-background-clip: text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+    font-size:25px;
+    letter-spacing: 1px;
+    margin:10px;
+    font-weight: 700;
+  }
+  
+@keyframes element {
+    from {width: 0px;}
+    to {width:100%;}
+}
+
+.Login-page-main-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.login-page-second-container{
+    padding:10px;
+    display: flex;
+    height: 70vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-page-signIn{
+    color:rgb(14, 15, 17);
+    font-size:16px;
+    font-family: Roboto;
+    margin:0px;
+    width: 90%;
+    padding:8px;
+    border:none;
+    outline:none;
+    background-color: transparent;
+}
+
+.form-button-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color:#ffffff ;
+    border-radius: 10px;
+    padding:0px;
+    position: relative;
+    width:104%;
+}
+
+.form-element-login-page{
+    width: 60%;
+}
+
+.side-container-login-page{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content:center;
+    flex-wrap: wrap;
+    height: 50vh;
+    width:100%;
+    box-sizing: border-box;
+    position:relative
+}
+
+.active{
+    background-color: rgb(7, 132, 234);
+    border-radius: 10px;
+    margin:10px;
+    color:#fff;
+}
+
+.form-container-element-login{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100vh;
+}
+
+.background-image{ 
+    width: 50%;
+    position: absolute;
+    height: 100vh;
+}
+
+.container-main-form-login-page{
+    background-color:#ffffff ;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    margin-top:10px;
+    border-radius:10px;
+    width:100%;
+    padding:10px;
+    height:60vh;
+}
+
+.create-account{
+    color:#030a1e;
+    font-size: 28px;
+    font-family:'Courier New', Courier, monospace;
+    margin:10px;
+    margin-left:20px;
+}
+
+.account-desc{
+    color: #1e0439;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 16px;
+    margin-top:5px;
+    margin-left:20px;
+}
+
+label{
+    color:#05011b;
+    margin:10px;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form-input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin:10px;
+}
+
+input{
+    padding:10px;
+    margin-left:10px;
+    border-radius:10px;
+    outline:none;
+    font-family: 'Courier New', Courier, monospace;
+    border:1px solid grey;
+    background-color:transparent;
+    width:80%;
+    color:#141111;
+}
+
+.checkbox{
+    filter: invert(0);
+    padding:20px !important;
+    font-size:40px !important;
+    margin:10px;
+    width:25px !important;
+    height:25px;
+    border:1px solid rgb(30, 155, 197) !important;
+    margin-left:10px !important;
+    
+}
+
+.checkbox:checked:after{
+    background-color:rgb(30, 155, 197) !important;
+    width:20px !important;
+}
+
+.remember-container{
+    display: flex;
+    width: 50%;
+    flex-direction:row ;
+    align-items:center;
+    justify-content:flex-start;
+    margin-left:20px;
+}
+
+.createAccount-button{
+    background-color:rgb(54, 143, 232);
+    padding:15px;
+    width:70%;
+    border-radius:10px;
+    margin:10px;
+    color:#ffffff;
+    outline:none;
+    border:none;
+    margin-left:15%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.createAccount-button:hover{
+    background-color:transparent;
+    color: #0a88e8;
+    border:1px solid #0a88e8;
+}
+
+.forgot-password{
+    color:#4c4848;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 50%;
+    text-align: end;
+}
+
+.first-side-container-main{
+    background-color:#000040;
+    background-size: cover;
+    height:100vh;
+    width:50%;
+}
+
+@media screen and (max-width:564px) {
+    .Login-page-main-container{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content:center;
+        box-sizing:border-box;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .side-container-login-page{
+        height: 20vh;
+        box-sizing: border-box;
+    }
+
+    .background-image{
+        width: 100%;
+        height:70vh;
+    }
+
+    .container-main-form-login-page{
+        height:50vh !important;
+        width:100%;
+        padding:0px;
+        box-sizing: content-box;
+    }
+
+    #emailSignIn{
+        font-size:10px;
+        margin-left:10px;
+        padding:5px;
+        border-radius:5px;
+    }
+
+    #passWordSignIn{
+        font-size:10px;
+        margin-left:10px;
+        padding:5px;
+        border-radius:5px;
+    }
+
+    .checkbox{
+        padding:5px !important;
+        font-size:10px !important;
+        margin:0px !important;
+        width:18px !important;
+    }
+
+    .form-input-container{
+        margin:5px;
+        margin-top:0px !important;
+    }
+
+    .account-desc{
+        margin-bottom:0px;
+        font-size:12px;
+    }
+
+    label{
+        font-size:13px;
+    }
+
+    .form-element-login-page{
+        width: 100%;
+    }
+    .form-button-header{
+        width: 100%;
+    }
+    .first-side-container-main{
+        height:50vh;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .login-page-second-container{
+        width:100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+    .first-side-container-main{
+        width: 100%;
+        margin:0px;
+        box-sizing:content-box;
+    }
+    
+    .form-container-element-login{
+        width:90%;
+        height:100vh;
+        padding:0px;
+    }
+
+    .Login-page-header-main{
+        font-size:16px;
+        flex-wrap:wrap;
+        width:100%;
+    }
+    .form-element-login-page{
+        width:100%;
+    }
+
+    .form-button-header{
+        width:100%;
+    }
+
+
+    .container-main-form-login-page{
+        width: 100%;
+        height:60vh;
+    }
+    .create-account{
+        font-size:20px;
+    }
+
+    .signin{
+        height:40vh;
+        width:100%;
+        margin:0px !important;
+        padding:0px !important;
+    }
+    .form-input-container{
+        width:50%;
+    }
+
+    .createAccount-button{
+        margin-top:0px;
+        padding:7px;
+        width:50%;
+        margin-bottom:10px;
+        margin-left:25%;
+    }
+
+    .forgot-password{
+        font: size 16px;
+        margin-right:10px;
+    }
+}
+
+.error-message{
+    color:red;
+    text-align:center;
+}

@@ -1,0 +1,60 @@
+.nav-element-main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image:linear-gradient(160deg , #ffff 80% ,rgb(62, 154, 241) 10%);
+    justify-content: space-between;
+    padding:10px;
+    width: 100%;
+    padding-left:20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.nav-elements{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-around;
+    width:20%;
+}
+
+.nav-element{
+    margin:2px;
+    font-size:18px;
+    font-family:system-ui;
+    color:rgb(7, 4, 4);
+    font-weight: 600;
+}
+
+.link-element{
+    text-decoration:none;
+}
+
+.signin-button-header{
+    cursor:pointer;
+    padding:10px;
+    padding-right:20px;
+    padding-left:20px;
+    margin:5px;
+    color:#ffffff;
+    border-radius:10px;
+    background-color:transparent;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight:400;
+    text-align: center;
+    font-size:16px;
+    outline:none;
+    border:1px solid #ffff;
+}
+
+.signin-button-header:hover{
+    background-color:#ffff;
+    border:1px solid #ffffff;
+    color: #3373ea;
+}
+
+.logo-element{
+    width: 10%;
+    border-radius: 10px;
+}

@@ -1,0 +1,30 @@
+.main-paragraph-about{
+    color:#088eb7;
+    font-size: 20px;
+    margin:0px;
+    font-family: 'Roboto';
+}
+.office-image-about{
+    width: 50%;
+    border-radius: 10px;
+}
+
+.office-image-about
+
+.about-main-heading{
+    font-size: 28px;
+    color:rgb(8, 8, 50);
+    font-family: 'Roboto';
+}
+
+.paragraph-about{
+    color:grey;
+    font-size:18px;
+    font-family: 'Roboto';
+}
+
+.sub-paragraph{
+    color:gray;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
