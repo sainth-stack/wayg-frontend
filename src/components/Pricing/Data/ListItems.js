@@ -8,7 +8,6 @@
 
  export const FourthCardDetails = [
    { text: " Chat Explore" },
-  
  ];
   
 

@@ -4,62 +4,66 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaRegCheckCircle, FaYoutube } from "react-icons/fa";
 import logo512 from "../../../src/logo512.png";
 import "./index.css";
-import { Link } from 'react-router-dom';
 import { FirstCardDetails, FourthCardDetails, SecondCardDetails, ThirdCardDetails } from "./Data/ListItems";
 import { useEffect, useRef, useState } from "react";
 import PricingTable from "../Table/PricingTable";
 import { plans } from "./Data/Plans";
+import { useHistory } from 'react-router-dom';
 
 const Pricing = () => {
-      const cardRefs = useRef([]);
-      const [cardHeight, setCardHeight] = useState(0);
+  const cardRefs = useRef([]);
+  const [cardHeight, setCardHeight] = useState(0);
 
-      useEffect(() => {
-        if (cardRefs.current.length > 0) {
-          const heights = cardRefs.current.map((card) => card.offsetHeight);
-          setCardHeight(Math.max(...heights));
-        }
-      }, []);
- const PricingCard = ({
-   title,
-   listData,
-   description,
-   price,
-   buttonText,
-   buttonLink,
-   index,
- }) => (
-  <div
-  ref={(el) => (cardRefs.current[index] = el)}
-  style={{ height: cardHeight || "auto" }}
-  className="pricing-card-one shadow-lg mx-3 mb-6 min-w-[250px] flex flex-col bg-white rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
->
-  <h1 className="pricing-card-heading font-semibold capitalize text-2xl md:text-3xl transition-all text-center py-4">
-    {title}
-  </h1>
-  <p className="text-lg text-center mx-4 my-2 text-gray-700">{description}</p>
-  <h1 className="heading-two-pricing-card flex items-center justify-center mb-4">
-    <span className="text-3xl font-extrabold">{price}</span>
-    <span className="ml-2 text-xl text-gray-500">{"per/month"}</span>
-  </h1>
-  <ul className="space-y-3 text-justify flex-1 mb-4 mx-4">
-    {listData.map(({ text }, index) => (
-      <li key={index} className="flex items-center space-x-3 text-lg">
-        <span className="text-green-600">
-          <FaRegCheckCircle />
-        </span>
-        <span className="text-gray-600">{text}</span>
-      </li>
-    ))}
-  </ul>
-  <Link to={buttonLink}>
-    <button className="bg-[#29c0ee] text-white px-6 py-3 max-w-72 mb-3 rounded-lg hover:bg-[#06b6ec] transition duration-300 text-lg font-semibold w-full">
-      {buttonText}
-    </button>
-  </Link>
-</div>
+  useEffect(() => {
+    if (cardRefs.current.length > 0) {
+      const heights = cardRefs.current.map((card) => card.offsetHeight);
+      setCardHeight(Math.max(...heights));
+    }
+  }, []);
+  const navigate = useHistory()
+  const navigateToExternalPage = (buttonLink) => {
+    window.location.href = buttonLink;
+  };
+  const PricingCard = ({
+    title,
+    listData,
+    description,
+    price,
+    buttonText,
+    buttonLink,
+    index,
+  }) => (
+    <div
+      ref={(el) => (cardRefs.current[index] = el)}
+      style={{ height: cardHeight || "auto" }}
+      className="pricing-card-one shadow-lg mx-3 mb-6 min-w-[250px] flex flex-col bg-white rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+    >
+      <h1 className="pricing-card-heading font-semibold capitalize text-2xl md:text-3xl transition-all text-center py-4">
+        {title}
+      </h1>
+      <p className="text-lg text-center mx-4 my-2 text-gray-700">{description}</p>
+      <h1 className="heading-two-pricing-card flex items-center justify-center mb-4 customFont">
+        <span className="text-2xl font-extrabold">{price}</span>
+        <span className="ml-2 text-lg text-gray-500">{"per/month"}</span>
+      </h1>
+      <ul className="space-y-3 text-justify flex-1 mb-4 mx-4">
+        {listData.map(({ text }, index) => (
+          <li key={index} className="flex items-center space-x-3 text-lg">
+            <span className="text-green-600">
+              <FaRegCheckCircle />
+            </span>
+            <span className="text-gray-600 text-[14px] leading-[22px]">{text}</span>
+          </li>
+        ))}
+      </ul>
+      <div onClick={() => navigateToExternalPage(buttonLink)}>
+        <button className="bg-[#29c0ee] text-white px-6 py-3 max-w-72 mb-3 rounded-lg hover:bg-[#06b6ec] transition duration-300 text-lg font-semibold w-full">
+          {buttonText}
+        </button>
+      </div>
+    </div>
 
- );
+  );
 
 
   const getFooterSectionPricing = () => (
@@ -129,13 +133,13 @@ const Pricing = () => {
       <div className="pricing-main-container">
         <h1>Plans & Pricing</h1>
         <p>Find the right plan for your goals</p>
-        <div className="container mx-auto my-6 px-4 flex flex-wrap justify-center items-center gap-4">
+        <div className="container mx-auto my-6 px-4 flex flex-nowrap justify-center items-center gap-4">
           <PricingCard
             index={0}
             listData={FourthCardDetails}
             title="Free"
             description="Basic Chat & Basic ML"
-            price="$0"
+            price="0"
             buttonText="GET STARTED"
             buttonLink="/login"
           />
@@ -144,16 +148,16 @@ const Pricing = () => {
             listData={FirstCardDetails}
             title="Basic"
             description="Basic Chat & Basic ML"
-            price="$99"
+            price="99"
             buttonText="GET STARTED"
-            buttonLink="/login"
+            buttonLink="https://superprofile.bio/vp/676a743280809a00134c2119"
           />
           <PricingCard
             index={2}
             listData={SecondCardDetails}
             title="Standard"
             description="Elevate your client services with branded analytics and API integration."
-            price="$1999"
+            price="1999"
             buttonText="CONTACT US"
             buttonLink="/contact"
           />
@@ -162,7 +166,7 @@ const Pricing = () => {
             listData={ThirdCardDetails}
             title="Advanced"
             description="Serious agencies start here."
-            price="$2999"
+            price="2999"
             buttonText="CONTACT US"
             buttonLink="/contact"
           />
