@@ -1,13 +1,18 @@
 export const plans = [
   {
+    title: "Free",
+    description: "Great for individuals starting out.",
+    price: "$99",
+    features: ["Discover"],
+    buttonText: "GET STARTED",
+    buttonLink: "/login",
+  },
+
+  {
     title: "Basic",
     description: "Great for individuals starting out.",
     price: "$99",
-    features: [
-      "Connect",
-      "Discover",
-      
-    ],
+    features: ["Discover", "Connect"],
     buttonText: "GET STARTED",
     buttonLink: "/login",
   },
@@ -15,13 +20,7 @@ export const plans = [
     title: "Standard",
     description: "Ideal for small teams and businesses.",
     price: "$1999",
-    features: [
-      "Connect",
-      "Discover",
-      "KPI",
-      
-      
-    ],
+    features: ["Connect", "Discover", "KPI"],
     buttonText: "CONTACT US",
     buttonLink: "/contact",
   },
@@ -29,13 +28,7 @@ export const plans = [
     title: "Advanced",
     description: "For growing businesses and enterprises.",
     price: "$2999",
-    features: [
-      "Connect",
-      "Discover",
-      "Visualize",
-      "KPI",
-      
-    ],
+    features: ["Connect", "Discover", "Visualize", "KPI"],
     buttonText: "CONTACT US",
     buttonLink: "/contact",
   },
