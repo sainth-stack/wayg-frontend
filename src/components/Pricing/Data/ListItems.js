@@ -6,6 +6,12 @@
 ];
   
 
+ export const FourthCardDetails = [
+   { text: " Chat Explore" },
+  
+ ];
+  
+
 
  export const SecondCardDetails = [
     {  text: ' Whitelabel Chat Explore' },

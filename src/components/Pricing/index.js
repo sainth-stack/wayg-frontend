@@ -5,7 +5,7 @@ import { FaRegCheckCircle, FaYoutube } from "react-icons/fa";
 import logo512 from "../../../src/logo512.png";
 import "./index.css";
 import { Link } from 'react-router-dom';
-import { FirstCardDetails, SecondCardDetails, ThirdCardDetails } from "./Data/ListItems";
+import { FirstCardDetails, FourthCardDetails, SecondCardDetails, ThirdCardDetails } from "./Data/ListItems";
 import { useEffect, useRef, useState } from "react";
 import PricingTable from "../Table/PricingTable";
 import { plans } from "./Data/Plans";
@@ -29,35 +29,36 @@ const Pricing = () => {
    buttonLink,
    index,
  }) => (
-   <div
-     ref={(el) => (cardRefs.current[index] = el)}
-     style={{ height: cardHeight || "auto" }}
-     className="pricing-card-one shadow-md  mx-3 mb-4 min-w-60 hover:shadow-lg flex flex-col"
-   >
-     <h1 className="pricing-card-heading font-bold capitalize text-2xl transition-all">
-       {title}
-     </h1>
-     <p className="text-lg mx-3">{description}</p>
-     <h1 className="heading-two-pricing-card flex items-center justify-center">
-       <span className="text-3xl font-extrabold my-2">{price}</span>
-       <span className="ml-3">{"per/ month"}</span>
-     </h1>
-     <ul className="space-y-2 text-justify flex-1 mb-3">
-       {listData.map(({ text }, index) => (
-         <li key={index} className="flex items-center space-x-2 mx-3 text-lg">
-           <span className="text-green-600 mx-2">
-             <FaRegCheckCircle />
-           </span>
-           <span className="text-gray-600 space-x-2 mx-3">{text}</span>
-         </li>
-       ))}
-     </ul>
-     <Link to={buttonLink}>
-       <button className="bg-[#29c0ee] text-white my-2 p-2 rounded-lg hover:bg-[#06b6ec] transition duration-300">
-         {buttonText}
-       </button>
-     </Link>
-   </div>
+  <div
+  ref={(el) => (cardRefs.current[index] = el)}
+  style={{ height: cardHeight || "auto" }}
+  className="pricing-card-one shadow-lg mx-3 mb-6 min-w-[250px] flex flex-col bg-white rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+>
+  <h1 className="pricing-card-heading font-semibold capitalize text-2xl md:text-3xl transition-all text-center py-4">
+    {title}
+  </h1>
+  <p className="text-lg text-center mx-4 my-2 text-gray-700">{description}</p>
+  <h1 className="heading-two-pricing-card flex items-center justify-center mb-4">
+    <span className="text-3xl font-extrabold">{price}</span>
+    <span className="ml-2 text-xl text-gray-500">{"per/month"}</span>
+  </h1>
+  <ul className="space-y-3 text-justify flex-1 mb-4 mx-4">
+    {listData.map(({ text }, index) => (
+      <li key={index} className="flex items-center space-x-3 text-lg">
+        <span className="text-green-600">
+          <FaRegCheckCircle />
+        </span>
+        <span className="text-gray-600">{text}</span>
+      </li>
+    ))}
+  </ul>
+  <Link to={buttonLink}>
+    <button className="bg-[#29c0ee] text-white px-6 py-3 max-w-72 mb-3 rounded-lg hover:bg-[#06b6ec] transition duration-300 text-lg font-semibold w-full">
+      {buttonText}
+    </button>
+  </Link>
+</div>
+
  );
 
 
@@ -128,31 +129,40 @@ const Pricing = () => {
       <div className="pricing-main-container">
         <h1>Plans & Pricing</h1>
         <p>Find the right plan for your goals</p>
-        <div className="flex justify-items-center items-center container my-3 px-4 ">
+        <div className="container mx-auto my-6 px-4 flex flex-wrap justify-center items-center gap-4">
           <PricingCard
             index={0}
-            listData={FirstCardDetails}
-            title="Basic"
+            listData={FourthCardDetails}
+            title="Free"
             description="Basic Chat & Basic ML"
-            price="$29"
+            price="$0"
             buttonText="GET STARTED"
             buttonLink="/login"
           />
           <PricingCard
             index={1}
+            listData={FirstCardDetails}
+            title="Basic"
+            description="Basic Chat & Basic ML"
+            price="$99"
+            buttonText="GET STARTED"
+            buttonLink="/login"
+          />
+          <PricingCard
+            index={2}
             listData={SecondCardDetails}
             title="Standard"
             description="Elevate your client services with branded analytics and API integration."
-            price="$39"
+            price="$1999"
             buttonText="CONTACT US"
             buttonLink="/contact"
           />
           <PricingCard
-            index={2}
+            index={3}
             listData={ThirdCardDetails}
             title="Advanced"
             description="Serious agencies start here."
-            price="$49"
+            price="$2999"
             buttonText="CONTACT US"
             buttonLink="/contact"
           />

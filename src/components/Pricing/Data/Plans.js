@@ -2,15 +2,11 @@ export const plans = [
   {
     title: "Basic",
     description: "Great for individuals starting out.",
-    price: "$29",
+    price: "$99",
     features: [
       "Connect",
       "Discover",
-      "Visualize",
-      "KPI",
-      "Predict",
-      "Forecast",
-      "Reports",
+      
     ],
     buttonText: "GET STARTED",
     buttonLink: "/login",
@@ -18,15 +14,13 @@ export const plans = [
   {
     title: "Standard",
     description: "Ideal for small teams and businesses.",
-    price: "$49",
+    price: "$1999",
     features: [
       "Connect",
       "Discover",
-      "Visualize",
       "KPI",
-      "Predict",
-      "Forecast",
-      "Reports",
+      
+      
     ],
     buttonText: "CONTACT US",
     buttonLink: "/contact",
@@ -34,15 +28,13 @@ export const plans = [
   {
     title: "Advanced",
     description: "For growing businesses and enterprises.",
-    price: "$99",
+    price: "$2999",
     features: [
       "Connect",
       "Discover",
       "Visualize",
       "KPI",
-      "Predict",
-      "Forecast",
-      "Test",
+      
     ],
     buttonText: "CONTACT US",
     buttonLink: "/contact",
